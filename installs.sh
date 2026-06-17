@@ -15,3 +15,5 @@ git clone https://aur.archlinux.org/1password.git
 cd 1password/
 makepkg -si
 cd
+
+##adding a test comment
