@@ -1,0 +1,9 @@
+@define-color bg_color #%%color0.hex%%;
+@define-color fg_color #%%color7.hex%%;
+@define-color base_color #%%color8.hex%%;
+@define-color text_color #%%color7.hex%%;
+@define-color text_color_disabled #%%color8.hex%%;
+@define-color selected_bg_color #%%color1.hex%%;
+@define-color selected_fg_color #%%color15.hex%%;
+@define-color tooltip_bg_color #%%color0.hex%%;
+@define-color tooltip_fg_color #%%color7.hex%%;

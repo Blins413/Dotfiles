@@ -1,0 +1,20 @@
+/* ~/.config/hellwal/templates/zen.css */
+@namespace url("http://mozilla.org");
+
+:root {
+    --zen-primary-color: #%%color1.hex%% !important;
+    --zen-secondary-color: #%%color2.hex%% !important;
+    --counter-background-color: #%%background.hex%% !important;
+
+    /* Main UI colors */
+    --toolbar-bgcolor: #%%background.hex%% !important;
+    --toolbar-color: #%%foreground.hex%% !important;
+    --lwt-accent-color: #%%background.hex%% !important;
+    --lwt-text-color: #%%foreground.hex%% !important;
+
+    /* Active states and sidebars */
+    --autocomplete-popup-background: #%%color0.hex%% !important;
+    --tab-selected-bgcolor: #%%color8.hex%% !important;
+    --button-hover-bgcolor: #%%color2.hex%% !important;
+}
+

@@ -1,0 +1,65 @@
+@import "../../.cache/hellwal/colors-waybar.css";
+
+@define-color menu-bg rgba(0, 0, 0, .4);
+@define-color button-bg rgba(0, 0, 0, .8);
+@define-color main-bg @color1;
+@define-color main-fg @foreground;
+@define-color active-bg @color9;
+
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: @menu-bg;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+button {
+	text-shadow: none;
+	border-color: @main-fg;
+	border-radius: 15px;
+	color: @main-fg;
+	background-color: @button-bg;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+	min-width: 100px;
+	min-height: 100px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+button:focus, button:active, button:hover {
+	background-color: @active-bg;
+	outline-style: none;
+}
+
+#lock {
+  background-image: image(url("/home/rory/.config/wlogout/icons/lock.svg"), url("/home/rory/.config/wlogout/icons/lock.svg"));
+}
+
+#logout {
+    background-image: image(url("/home/rory/.config/wlogout/icons/logout.svg"), url("/home/rory/.config/wlogout/icons/logout.svg"));
+}
+
+#suspend {
+    background-image: image(url("/home/rory/.config/wlogout/icons/suspend.svg"), url("/home/rory/.config/wlogout/icons/suspend.svg"));
+}
+
+#hibernate {
+    background-image: image(url("/home/rory/.config/wlogout/icons/hibernate.svg"), url("/home/rory/.config/wlogout/icons/hibernate.svg"));
+}
+
+#shutdown {
+    background-image: image(url("/home/rory/.config/wlogout/icons/shutdown.svg"), url("/home/rory/.config/wlogout/icons/shutdown.svg"));
+}
+
+#reboot {
+    background-image: image(url("/home/rory/.config/wlogout/icons/reboot.svg"), url("/home/rory/.config/wlogout/icons/reboot.svg"));
+}

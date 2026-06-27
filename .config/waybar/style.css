@@ -1,0 +1,111 @@
+@import '../../.cache/hellwal/colors-waybar.css';
+
+@define-color bar-bg rgba(0, 0, 0, .4);
+@define-color main-bg @background;
+@define-color main-fg @foreground;
+@define-color wb-act-bg @color7;
+@define-color wb-act-fg @color0;
+@define-color wb-hvr-bg @color15;
+@define-color wb-hvr-fg @color8;
+
+tooltip {
+    background: alpha(@main-bg,0.5);
+    color: @main-fg;
+    border-radius: 8px;
+    border-width: 0px;
+    border: 0.5px solid @main-fg;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @main-fg;
+}
+
+* {
+	font-family: "JetBrainsMono Nerd Font";
+	font-weight: bold;
+	min-height: 0;
+	font-size: 100%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	border-radius: 12px;
+}
+
+window#waybar {
+	background: @bar-bg;
+	color: @main-fg;
+}
+
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: @main-fg;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+    font-size: 18px;
+}
+
+#workspaces.rw button {
+    border: 0.2px solid alpha(@main-fg, 0.8);
+    padding: 1px;
+    border-radius: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: @main-fg;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+    font-size: 16px;
+}
+
+#workspaces button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+    margin-left: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    padding-left: 3px;
+    padding-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.active:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    margin-left: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#tray {
+	padding: 2px 8px;
+}
+
+#window {
+	padding: 2px 8px;
+}
+
+#bluetooth {
+	padding: 2px 8px;
+}
+
+#clock {
+	padding: 2px 8px;
+}

@@ -1,0 +1,7 @@
+/* ~/.config/hellwal/templates/walker.css */
+
+@define-color window_bg_color #%%color0.hex%%;
+@define-color accent_bg_color #%%color5.hex%%;
+@define-color theme_fg_color #%%color15.hex%%;
+@define-color error_bg_color #%%color1.hex%%;
+@define-color error_fg_color #%%color7.hex%%;
