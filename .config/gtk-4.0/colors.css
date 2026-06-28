@@ -1,0 +1,16 @@
+/* FlatColor theme overrides for hellwal */
+@define-color bg_color {color0};
+@define-color fg_color {color7};
+@define-color base_color {color0};
+@define-color text_color {color15};
+@define-color selected_bg_color {color1};
+@define-color selected_fg_color {color7};
+@define-color tooltip_bg_color {color0};
+@define-color tooltip_fg_color {color7};
+
+/* Extra accent bindings for buttons/links */
+@define-color theme_selected_bg_color {color1};
+@define-color theme_selected_fg_color {color7};
+@define-color accent_color {color2};
+@define-color accent_bg_color {color2};
+

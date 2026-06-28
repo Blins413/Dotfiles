@@ -48,10 +48,11 @@ local menu        = "walker"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
- hl.on("hyprland.start", function () 
-   hl.exec_cmd("waybar & awww-daemon & pypr")
-   hl.exec_cmd("elephant & walker --gapplication-service")
- end)
+hl.on("hyprland.start", function () 
+	hl.exec_cmd("waybar & awww-daemon & pypr & nm-applet --indicator & swaync")
+	hl.exec_cmd("elephant & walker --gapplication-service")
+	hl.exec_cmd("sleep 1 && hyprlock")
+end)
 
 -- Run D-Bus updates on startup
 hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
@@ -538,6 +539,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("quickshell -c hyprquickpaper"))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("wlogout -b 6 & disown"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -609,34 +611,19 @@ hl.window_rule({
         fullscreen = false,
         pin        = false,
     },
-
     no_focus = true,
 })
-
-hl.window_rule({
-	name = "bluetooth",
-	match = {class = "blueman-manager"},
-	float = true,
-	size = {"400", "600"},
-	move = {"monitor_w - 500", "monitor_h-(monitor_h-50)"},
-	animation = "slide top",
-})
-
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
 
 hl.window_rule({
     name  = "move-hyprland-run",
     match = { class = "hyprland-run" },
     move  = "20 monitor_h-120",
     float = true,
+})
+
+hl.window_rule({
+	match = {float = true},
+	border_color = C.color7 .. " " ..  C.color5,
 })
 
 hl.layer_rule({

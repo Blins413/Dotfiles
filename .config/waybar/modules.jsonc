@@ -91,7 +91,7 @@
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
     "tooltip": true,
-    "on-click": "blueman-manager"
+    "on-click": "pypr toggle bluetooth"
   },
   "clock": {
     "interval": 1,
@@ -275,7 +275,7 @@
     },
     "scroll-step": 5.0,
     "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
-    "on-click-right": "pavucontrol -t 3",
+    "on-click-right": "pypr toggle audio",
     "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
     "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
     "smooth-scrolling-threshold": 1

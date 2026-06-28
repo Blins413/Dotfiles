@@ -6,6 +6,9 @@ awww img $1 -t grow --transition-duration 3 --transition-fps 120 --transition-po
 #Run hellwal to generate the color pallettes
 hellwal -i $1
 
+#Write the current wallpaper file
+printf '%s\n' "$1" > ~/.config/hypr/scripts/.current_wallpaper
+
 #Apply themeing to discord/themecord
 themecord -g
 

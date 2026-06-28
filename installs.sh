@@ -24,6 +24,10 @@ yay -S BeautyLine
 sudo pacman -S ttf-jetbrains-mono-nerd
 yay -S walker-bin
 yay -S elephant-desktopapplications elephant-providerlist elephant-cal elephant-calcc
+yay -S pwvucontrol
+yay -S hyprlock
+sudo pacman -S networkmanager network-manager-applet nm-connection-editor
+yay -S swaync
 
 ## Installing Environment Apps
 sudo pacman -S waybar
@@ -45,7 +49,12 @@ cd 1password/
 makepkg -si
 cd
 
+## Disable IWCTL and enable Network Manager
+sudo systemctl disable --now iwd.service
+sudo systemctl enable --now NetworkManager.service
+
 ##Notify of Manual Adjustments
 echo "~/.config/quickshell/hyprquickpaper/config.json will need adjusting to the appropriate user"
 echo "/usr/share/themes/FlatColor/gtk-3.20 | gtk-3.0 | gtk 2.0 will all need to have the source file for color adjusted"
 echo "nwg-look - update the widgets theme/icons theme/cursor theme and font"
+echo "add the autologin files to /etc/sddm.conf.d/autlogin.conf"

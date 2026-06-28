@@ -102,6 +102,27 @@ window#waybar {
 	padding: 2px 8px;
 }
 
+#battery {
+	box-shadow: none;
+	text-shadow: none;
+	padding: 0px;
+	border-radius: 9px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+#battery.warning {
+	background: @wb-act-bg;
+	color: @wb-act-fg;
+}
+
+#battery.critical {
+	background: @wb-hvr-bg;
+	color: @wb-hvr-fg;
+}
+
 #bluetooth {
 	padding: 2px 8px;
 }

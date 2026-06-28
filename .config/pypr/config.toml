@@ -1,6 +1,25 @@
 [pyprland]
 plugins = [
     "scratchpads",
-    "gamemode",
-    "magnify",
 ]
+
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+animation = "fromTop"
+unfocus = "hide"
+
+[scratchpads.bluetooth]
+command = "blueman-manager"
+class = "blueman-manager"
+animation = "fromTop"
+size = "50% 50%"
+position = "25% 50px"
+unfocus = "hide"
+
+[scratchpads.audio]
+command = "pwvucontrol"
+class = "com.saivert.pwvucontrol"
+animation = "fromLeft"
+size = "40% 93%"
+position = "10px 50px"
